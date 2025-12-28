@@ -1,0 +1,130 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "foreground": "#DCD7BA",
+                    "leading_diamond": "<#957FB8>~</> ",
+                    "options": {
+                        "display_host": true
+                    },
+                    "style": "diamond",
+                    "template": "{{ .UserName }} ",
+                    "type": "session"
+                },
+                {
+                    "foreground": "#D27E99",
+                    "options": {
+                        "branch_icon": "\ue725 ",
+                        "fetch_status": true,
+                        "fetch_upstream_icon": true,
+                        "fetch_worktree_count": true
+                    },
+                    "style": "diamond",
+                    "template": "<#DCD7BA>{{ .UpstreamIcon }}</>{{ .HEAD }}",
+                    "type": "git"
+                },
+                {
+                    "foreground": "#7E9CD8",
+                    "style": "powerline",
+                    "template": " <#DCD7BA>\uf120</> {{ .Name }} ",
+                    "type": "shell"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "right",
+            "segments": [
+                {
+                    "foreground": "#DCD7BA",
+                    "style": "plain",
+                    "type": "text"
+                },
+                {
+                    "foreground": "#DCD7BA",
+                    "options": {
+                        "style": "dallas",
+                        "threshold": 0
+                    },
+                    "style": "diamond",
+                    "template": " <#E6C384>{{ .FormattedMs }}s</> <#DCD7BA>\udb80\udddd</>",
+                    "type": "executiontime"
+                },
+                {
+                    "foreground": "#76946A",
+                    "style": "diamond",
+                    "template": " <#DCD7BA>\uf85a</> {{ round (div (sub .PhysicalTotalMemory .PhysicalAvailableMemory) 1073741824.0) 2 }}G/{{ round (div .PhysicalTotalMemory 1073741824.0) 2 }}G ",
+                    "type": "sysinfo"
+                },
+                {
+                    "foreground": "#727169",
+                    "options": {
+                        "time_format": "3:04 PM"
+                    },
+                    "style": "diamond",
+                    "template": " <#C8C093>\uf017</> {{ .CurrentDate | date .Format }} ",
+                    "type": "time"
+                },
+                {
+                    "options": {
+                        "root_icon": "\uf292 "
+                    },
+                    "style": "diamond",
+                    "template": " \uf0e7",
+                    "type": "root"
+                },
+                {
+                    "foreground": "#76946A",
+                    "style": "diamond",
+                    "template": " <#DCD7BA>\ue718</> {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+                    "type": "node"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "foreground": "#7E9CD8",
+                    "leading_diamond": "<#957FB8>~</>",
+                    "options": {
+                        "folder_icon": "\u002F",
+                        "folder_separator_icon": " \u002F ",
+                        "home_icon": "home",
+                        "style": "agnoster_full"
+                    },
+                    "style": "diamond",
+                    "template": " \ue5ff {{ .Path }}",
+                    "trailing_diamond": "",
+                    "type": "path"
+                },
+                {
+                    "foreground": "#98BB6C",
+                    "foreground_templates": [
+                        "{{ if gt .Code 0 }}#C34043{{ end }}"
+                    ],
+                    "options": {
+                        "always_enabled": true
+                    },
+                    "style": "plain",
+                    "template": " \u007E ",
+                    "type": "status"
+                }
+            ],
+            "type": "prompt"
+        }
+    ],
+    "console_title_template": "{{ .Folder }}",
+    "transient_prompt": {
+        "background": "transparent",
+        "foreground": "#DCA561",
+        "template": "\ue285 "
+    },
+    "version": 4
+}
