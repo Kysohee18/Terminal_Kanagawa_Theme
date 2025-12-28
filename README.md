@@ -4,7 +4,8 @@
 
 This is a custom configuration for [Oh My Posh](https://ohmyposh.dev/), designed for developers who prioritize visual comfort and essential information. It replaces the harsh contrast of standard themes with the soothing, desaturated palette of the Kanagawa color scheme.
 
-![Preview](preview_screenshot.png)
+<img width="1455" height="253" alt="image" src="https://github.com/user-attachments/assets/922466b5-4449-4959-8da6-5dea972db028" />
+
 *(Jangan lupa ganti ini dengan screenshot terminal Anda nanti)*
 
 ## ✨ Features
